@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paws for Aleksey | Service Dog Campaign</title>
+    <style>
+        :root {
+            --primary: #1a365d;
+            --secondary: #2b6cb0;
+            --accent: #dd6b20;
+            --bg: #f7fafc;
+            --card-bg: #ffffff;
+            --text: #2d3748;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--bg);
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            text-align: center;
+            padding: 2.5rem 1rem 1.5rem;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        header p {
+            margin-top: 0.5rem;
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        /* Navigation Bar / Tabs */
+        nav {
+            background: var(--primary);
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav button {
+            background: none;
+            border: none;
+            color: rgba(255,255,255,0.8);
+            padding: 1rem 1.2rem;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        nav button:hover, nav button.active {
+            color: white;
+            background-color: var(--secondary);
+            border-bottom: 3px solid var(--accent);
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        /* Tab Content Control */
+        .tab-content {
+            display: none;
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            animation: fadeIn 0.4s ease-in-out;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(6px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h2 {
+            color: var(--primary);
+            border-bottom: 2px solid #edf2f7;
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        .qr-container {
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .qr-code {
+            max-width: 220px;
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+            margin: 1rem 0;
+        }
+
+        .hero-img {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 1.5rem;
+        }
+
+        .btn-donate {
+            display: inline-block;
+            background-color: var(--accent);
+            color: white;
+            padding: 0.9rem 2rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-top: 1rem;
+            box-shadow: 0 4px 10px rgba(221, 107, 32, 0.3);
+        }
+
+        .btn-donate:hover {
+            background-color: #c05621;
+        }
+
+        ul {
+            padding-left: 1.2rem;
+        }
+
+        li {
+            margin-bottom: 0.8rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #718096;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>🐾 Paws for Aleksey</h1>
+        <p>A Service Dog Journey for Safety, Independence, and Peace of Mind</p>
+    </header>
+
+    <!-- Navigation Tabs -->
+    <nav>
+        <button class="tab-btn active" onclick="openTab(event, 'home')">Home</button>
+        <button class="tab-btn" onclick="openTab(event, 'story')">Aleksey's Story</button>
+        <button class="tab-btn" onclick="openTab(event, 'education')">SCN8A & SUDEP</button>
+        <button class="tab-btn" onclick="openTab(event, 'help')">How to Help & Links</button>
+    </nav>
+
+    <div class="container">
+
+        <!-- TAB 1: HOME -->
+        <div id="home" class="tab-content active">
+            <h2 style="text-align: center;">Help Us Reach Our Goal of $20,000</h2>
+            
+            <p style="text-align: center; font-size: 1.1rem;">
+                Scan or click the QR code below to make a direct donation toward Aleksey's seizure alert service dog!
+            </p>
+
+            <div class="qr-container">
+                <!-- Replace 'qr-code-placeholder.png' with your QR code image filename after uploading to GitHub -->
+                <img src="qr-code-placeholder.png" alt="Donate QR Code" class="qr-code"><br>
+                <a href="#" class="btn-donate" target="_blank">❤️ Click Here to Donate</a>
+            </div>
+
+            <hr style="border: 0; border-top: 1px solid #edf2f7; margin: 2rem 0;">
+
+            <!-- Replace 'aleksey-photo.jpg' with your photo filename -->
+            <img src="aleksey-photo.jpg" alt="Aleksey" class="hero-img">
+
+            <p style="font-size: 1.1rem; text-align: center; font-style: italic;">
+                "Aleksey is a bright, joyful 10-year-old boy. Our goal is to provide him with a professionally trained seizure alert service dog so he can sleep safely in his own room and embrace his teenage years with confidence and independence."
+            </p>
+        </div>
+
+        <!-- TAB 2: ALEKSEY'S STORY -->
+        <div id="story" class="tab-content">
+            <h2>Aleksey’s Journey</h2>
+            
+            <ul>
+                <li>
+                    <strong>The Early Days:</strong> At just 4 months old, Aleksey experienced sudden, severe medical emergencies. After months of hospitalizations and uncertainty, genetic testing revealed he has <strong>SCN8A</strong>, a rare genetic mutation causing dynamic and unpredictable epilepsy.
+                </li>
+                <li>
+                    <strong>Overcoming Obstacles:</strong> As a resilient military family, we navigated state moves, frequent hospital visits, and constant care transitions. Through it all—and with years of therapy and specialized neurological care—Aleksey has thrived. Today, he is a bright, kind, and joyful 10-year-old who loves drawing, solving puzzles, spending time in nature, and making people laugh!
+                </li>
+                <li>
+                    <strong>A New Challenge & Need for Safety:</strong> Recently, Aleksey’s seizures began occurring in his sleep. Because nighttime seizures pose significant risks without an advance warning system, he must sleep in our room for constant line-of-sight supervision.
+                </li>
+                <li>
+                    <strong>Why a Service Dog?</strong> As Aleksey approaches his teenage years, we want him to experience the independence every child deserves. A professionally trained service dog through <strong>Eyes Ears Nose & Paws (EENP)</strong> will alert us to nighttime and onset seizures, provide sensory grounding for his autism, and give Aleksey the confidence to sleep safely in his own bedroom and explore the world with a faithful partner.
+                </li>
+            </ul>
+        </div>
+
+        <!-- TAB 3: SCN8A & SUDEP EDUCATION -->
+        <div id="story-education" class="tab-content">
+            <h2>Understanding SCN8A & SUDEP</h2>
+            
+            <h3>What is SCN8A Epilepsy?</h3>
+            <p>
+                SCN8A developmental and epileptic encephalopathy is a rare genetic mutation affecting the sodium channels in the brain. It causes unpredictable seizure activity that can change in frequency, duration, and severity throughout a child's life.
+            </p>
+
+            <h3>The Reality of Nighttime Seizures & SUDEP</h3>
+            <p>
+                <strong>SUDEP</strong> stands for <em>Sudden Unexpected Death in Epilepsy</em>. It is a critical concern for families managing severe epilepsy, particularly when seizures occur during sleep. 
+            </p>
+            <p>
+                Because nocturnal seizures often happen silently without mechanical warning, continuous supervision is required. A trained seizure alert service dog is capable of sensing nighttime seizure activity or onset changes, alerting caregivers immediately so prompt medical intervention can take place.
+            </p>
+        </div>
+
+        <!-- TAB 4: HOW TO HELP & HELPFUL LINKS -->
+        <div id="help" class="tab-content">
+            <h2>How You Can Support & Helpful Resources</h2>
+
+            <h3>Ways to Get Involved</h3>
+            <ul>
+                <li><strong>Donate:</strong> Every contribution directly helps fund the placement, training, and care costs for Aleksey's service dog.</li>
+                <li><strong>Share:</strong> Share this page (<code>mopo3uk.github.io/pawsforaleksey</code>) with friends, family, and local community groups!</li>
+                <li><strong>Community & Business Support:</strong> If you represent an organization or business interested in sponsoring an event or auction item, please reach out to us.</li>
+            </ul>
+
+            <h3>Helpful Community Links</h3>
+            <ul>
+                <li><a href="https://eenp.org/" target="_blank">Eyes Ears Nose & Paws (EENP)</a> – Our training foundation</li>
+                <li><a href="https://www.thecutesyndrome.org/" target="_blank">The Cute Syndrome Foundation</a> – SCN8A Research & Support</li>
+                <li><a href="https://caninesforkids.org/" target="_blank">Canines for Disabled Kids</a> – Service dog scholarships & guidance</li>
+            </ul>
+
+            <div style="text-align: center; margin-top: 2rem;">
+                <p><strong>Contact Us:</strong> Have questions or ideas for fundraising? Reach out to us through our Facebook campaign page or email!</p>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>Paws for Aleksey Campaign | Thank you for supporting our family!</p>
+    </footer>
+
+    <!-- Tab Switching Script -->
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            
+            // Hide all tab content
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+                tabcontent[i].classList.remove("active");
+            }
+
+            // Remove active class from buttons
+            tablinks = document.getElementsByClassName("tab-btn");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active");
+            }
+
+            // Show selected tab and activate button
+            document.getElementById(tabName).style.display = "block";
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+    </script>
+
+</body>
+</html>
