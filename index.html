@@ -27,17 +27,17 @@
             background: linear-gradient(135deg, var(--primary), var(--secondary));
             color: white;
             text-align: center;
-            padding: 2.5rem 1rem 1.5rem;
+            padding: 2rem 1rem 1.2rem;
         }
 
         header h1 {
             margin: 0;
-            font-size: 2.5rem;
+            font-size: 2.3rem;
         }
 
         header p {
-            margin-top: 0.5rem;
-            font-size: 1.1rem;
+            margin-top: 0.4rem;
+            font-size: 1.05rem;
             opacity: 0.9;
         }
 
@@ -56,7 +56,7 @@
             background: none;
             border: none;
             color: rgba(255,255,255,0.8);
-            padding: 1rem 1.2rem;
+            padding: 0.9rem 1.2rem;
             font-size: 1rem;
             font-weight: 600;
             cursor: pointer;
@@ -70,8 +70,8 @@
         }
 
         .container {
-            max-width: 850px;
-            margin: 2rem auto;
+            max-width: 900px;
+            margin: 1.5rem auto;
             padding: 0 1rem;
         }
 
@@ -100,25 +100,46 @@
             margin-top: 0;
         }
 
-        .qr-container {
+        .home-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            align-items: center;
+            margin-top: 1rem;
+        }
+
+        @media (max-width: 700px) {
+            .home-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .home-photo-box {
             text-align: center;
-            margin: 2rem 0;
+        }
+
+        .home-photo {
+            width: 100%;
+            max-height: 380px;
+            object-fit: contain;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .home-donate-box {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
 
         .qr-code {
-            max-width: 220px;
+            max-width: 190px;
             width: 100%;
             border-radius: 12px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-            margin: 1rem 0;
-        }
-
-        .hero-img {
-            width: 100%;
-            max-height: 420px;
-            object-fit: cover;
-            border-radius: 12px;
-            margin-bottom: 1.5rem;
+            margin: 0.8rem 0;
         }
 
         .photo-gallery {
@@ -140,12 +161,12 @@
             display: inline-block;
             background-color: var(--accent);
             color: white;
-            padding: 0.9rem 2rem;
+            padding: 0.85rem 1.8rem;
             border-radius: 30px;
             text-decoration: none;
             font-weight: bold;
-            font-size: 1.1rem;
-            margin-top: 1rem;
+            font-size: 1.05rem;
+            margin-top: 0.5rem;
             box-shadow: 0 4px 10px rgba(221, 107, 32, 0.3);
         }
 
@@ -180,22 +201,27 @@
         <!-- TAB 1: HOME -->
         <div id="home" class="tab-content active">
             <h2 style="text-align: center;">Help Us Reach Our Goal of $20,000</h2>
-            
-            <p style="text-align: center; font-size: 1.1rem;">
-                Scan or click the QR code below to make a direct donation toward Aleksey's seizure alert service dog!
-            </p>
 
-            <div class="qr-container">
-                <img src="qr-code.png" alt="Donate QR Code" class="qr-code"><br>
-                <a href="https://gofund.me/45a33d5e5" class="btn-donate" target="_blank">❤️ Click Here to Donate</a>
+            <div class="home-grid">
+                <!-- Left Side: Aleksey's Photo -->
+                <div class="home-photo-box">
+                    <img src="aleksey-main.png" alt="Aleksey" class="home-photo">
+                </div>
+
+                <!-- Right Side: QR Code, Short Text & Donate Button -->
+                <div class="home-donate-box">
+                    <p style="font-size: 0.95rem; margin-bottom: 0.2rem;">
+                        Scan or click below to support Aleksey's seizure alert service dog!
+                    </p>
+                    <img src="qr-code.png" alt="Donate QR Code" class="qr-code">
+                    <a href="https://gofund.me/45a33d5e5" class="btn-donate" target="_blank">❤️ Click Here to Donate</a>
+                </div>
             </div>
 
-            <hr style="border: 0; border-top: 1px solid #edf2f7; margin: 2rem 0;">
+            <hr style="border: 0; border-top: 1px solid #edf2f7; margin: 1.5rem 0 1rem 0;">
 
-            <img src="aleksey-main.png" alt="Aleksey" class="hero-img">
-
-            <p style="font-size: 1.15rem; text-align: center; font-style: italic;">
-                "And yet, through all of it, Aleksey is pure joy. He's 10 years old, kind, funny, and endlessly empathetic. He loves drawing, puzzles, the water, travel, and making new friends. We never wanted to keep him in a bubble. We want him to be a kid."
+            <p style="font-size: 1.1rem; text-align: center; font-style: italic; margin: 0;">
+                "Meet Aleksey: 10 years old, born with a rare genetic epilepsy (SCN8A), and the kindest, funniest kid you'll ever meet. Help us bring him a service dog who can alert us to seizures and give him the independence he deserves. 🐾"
             </p>
         </div>
 
@@ -203,17 +229,43 @@
         <div id="story" class="tab-content">
             <h2>Aleksey’s Journey</h2>
             
-            <p>At 4 months old, Aleksey was, in his doctor's words, the healthiest and happiest baby he had ever seen. Days later, everything changed. During a bath, he went stiff, stopped breathing, and turned blue. That night our world changed forever.</p>
+            <p>At just 4 months old, Aleksey was, in his doctor’s words, the healthiest and happiest baby he had ever seen. Just days later, in the middle of an ordinary bath, our world fell apart. His tiny body went stiff. He stopped breathing. His skin turned blue. In a moment, the carefree joy of new parenthood was replaced by a terror no parent should ever have to know.</p>
 
-            <p>The hospital couldn't find a cause. They sent us home with a diagnosis that didn't feel right. I knew my child, and I knew something was wrong. A few days later, I was back in the ER, and as we were about to be sent home, Aleksey had a seizure in my arms. That moment led us to Children's Mercy in Kansas City, 10 days in the PICU, different medications and treatment and still no answers. Not until January 2017 did genetic testing give us the name: <strong>SCN8A</strong>, a rare genetic epilepsy.</p>
+            <p>The hospital couldn’t explain what had happened. We were sent home with a diagnosis that didn’t feel right. But a mother knows her child, and deep in my heart, I knew something was terribly wrong. Days later, we were back in the ER. Just as we were about to be sent home again, Aleksey had a seizure in my arms. I watched my baby suffer, helpless to stop it, terrified that I might lose him.</p>
 
-            <p>We are a military family, and Aleksey's journey has taken us from Kansas to Colorado, California, and finally Virginia. Every move meant new doctors, new schools, and starting over. After years of searching for the right neurologist and the right medication, we found a specialist who understands SCN8A. Today his seizures are less frequent, but they've started happening at night. Since then, Aleksey has slept in our room. We live with the fear of what could happen while we sleep.</p>
+            <p>That moment led us to Children’s Mercy in Kansas City, where we spent 10 days in the PICU. There were medications, treatments, endless questions, and a desperate search for answers. But the answers didn’t come until January 2017, when genetic testing finally gave a name to the invisible battle taking over our baby’s life: <strong>SCN8A, a rare genetic epilepsy.</strong></p>
 
-            <p>And yet, through all of it, Aleksey is pure joy. He's 10 years old, kind, funny, and endlessly empathetic. He loves drawing, puzzles, the water, travel, and making new friends. We never wanted to keep him in a bubble. We want him to be a kid.</p>
+            <p>Since then, our family has learned to live with a fear that never completely goes away.</p>
 
-            <p>That's why we're raising funds for a service dog from <strong>Eyes Ears Nose & Paws</strong>. A trained dog can alert us to seizures, give him comfort and sensory grounding, and one day help him sleep in his own room, go out with friends, and believe in himself as he becomes a teenager.</p>
+            <p>As a military family, we’ve moved from Kansas to Colorado, California, and finally Virginia. Each move meant starting over—new doctors, new schools, new medical teams, and the exhausting search for someone who understood Aleksey’s condition. After years of searching for the right neurologist and the right medication, we finally found a specialist who understands SCN8A. Today, his seizures are less frequent, but they have begun happening at night.</p>
 
-            <p>Please help us bring Aleksey his four-legged best friend. Every donation and every share brings him closer. 🐾</p>
+            <p>And so, even at 10 years old, Aleksey sleeps in our room.</p>
+
+            <p>We listen for him. We watch over him. We try to sleep while knowing that a seizure could happen in the darkness, when we are least prepared to help him. Every parent worries about their child. But there is a particular kind of heartbreak in knowing that even when your child is safely tucked into bed, you cannot fully protect him from what his own body might do.</p>
+
+            <p><strong>We want to give him the freedom to grow up. We just want to know he’ll be safe enough to do it.</strong></p>
+
+            <p>Because here’s the thing about Aleksey: he is so much more than his diagnosis.</p>
+
+            <p>He is a kind, funny, deeply empathetic 10-year-old who loves drawing, puzzles, swimming, traveling, and making new friends. He notices other people’s feelings. He finds joy in the little things. He wants to explore the world, make memories, and be a kid.</p>
+
+            <p>He deserves all of that.</p>
+
+            <p>We have never wanted to raise him in a bubble or let fear define the boundaries of his life. We want him to have sleepovers someday, to build friendships, to become more independent, and to enter his teenage years with confidence instead of constant worry. We want him to experience the world beyond the walls of our home without his condition always dictating what is possible.</p>
+
+            <p>That is why we are raising funds for a specially trained service dog through <strong>Eyes Ears Nose & Paws</strong>.</p>
+
+            <p>This dog would be so much more than a companion. With appropriate training, a service dog could help alert us to seizure-related changes, provide comfort and sensory grounding, and offer Aleksey a steady, reassuring presence through the uncertainty of his condition. A dog could help us work toward the day when he feels safe sleeping in his own room. When he can venture out with friends. When he can begin to experience the independence every child deserves.</p>
+
+            <p>We know a service dog cannot cure SCN8A or erase every fear we carry. But perhaps it can help make the world feel a little less frightening for Aleksey—and give our family a little more room to breathe.</p>
+
+            <p><strong>We cannot take away the seizures. We cannot promise him a life without fear. But we can try to give him a best friend who will walk beside him through it all.</strong></p>
+
+            <p>Please help us bring Aleksey his four-legged best friend. Every donation, no matter the size, brings us one step closer to giving him more safety, more independence, and more opportunities to simply be the happy, curious, wonderful boy he is.</p>
+
+            <p>And if you cannot donate, sharing his story means more than you know.</p>
+
+            <p>From one family hoping for a little more peace, and one little boy who deserves the chance to grow up with confidence, friendship, and joy—thank you for helping us make that hope a reality. 🐾</p>
 
             <h3>Photo Gallery</h3>
             <div class="photo-gallery">
