@@ -41,7 +41,6 @@
             opacity: 0.9;
         }
 
-        /* Navigation Bar / Tabs */
         nav {
             background: var(--primary);
             display: flex;
@@ -76,7 +75,6 @@
             padding: 0 1rem;
         }
 
-        /* Tab Content Control */
         .tab-content {
             display: none;
             background: var(--card-bg);
@@ -117,10 +115,25 @@
 
         .hero-img {
             width: 100%;
-            max-height: 400px;
+            max-height: 420px;
             object-fit: cover;
             border-radius: 12px;
             margin-bottom: 1.5rem;
+        }
+
+        .photo-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .photo-gallery img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
         }
 
         .btn-donate {
@@ -140,14 +153,6 @@
             background-color: #c05621;
         }
 
-        ul {
-            padding-left: 1.2rem;
-        }
-
-        li {
-            margin-bottom: 0.8rem;
-        }
-
         footer {
             text-align: center;
             padding: 2rem;
@@ -160,10 +165,9 @@
 
     <header>
         <h1>🐾 Paws for Aleksey</h1>
-        <p>A Service Dog Journey for Safety, Independence, and Peace of Mind</p>
+        <p>A Service Dog for a Brave Boy</p>
     </header>
 
-    <!-- Navigation Tabs -->
     <nav>
         <button class="tab-btn active" onclick="openTab(event, 'home')">Home</button>
         <button class="tab-btn" onclick="openTab(event, 'story')">Aleksey's Story</button>
@@ -175,25 +179,23 @@
 
         <!-- TAB 1: HOME -->
         <div id="home" class="tab-content active">
-            <h2 style="text-align: center;">Help Us Reach Our Goal of $20,000</h2>
+            <h2 style="text-align: center;">Help Us Bring Aleksey His Four-Legged Best Friend</h2>
             
             <p style="text-align: center; font-size: 1.1rem;">
-                Scan or click the QR code below to make a direct donation toward Aleksey's seizure alert service dog!
+                Scan or click below to support Aleksey's GoFundMe campaign for a seizure alert service dog!
             </p>
 
             <div class="qr-container">
-                <!-- Replace 'qr-code-placeholder.png' with your QR code image filename after uploading to GitHub -->
-                <img src="qr-code-placeholder.png" alt="Donate QR Code" class="qr-code"><br>
-                <a href="#" class="btn-donate" target="_blank">❤️ Click Here to Donate</a>
+                <img src="qr-code.png" alt="Donate QR Code" class="qr-code"><br>
+                <a href="https://gofund.me/45a33d5e5" class="btn-donate" target="_blank">❤️ Donate on GoFundMe</a>
             </div>
 
             <hr style="border: 0; border-top: 1px solid #edf2f7; margin: 2rem 0;">
 
-            <!-- Replace 'aleksey-photo.jpg' with your photo filename -->
-            <img src="aleksey-photo.jpg" alt="Aleksey" class="hero-img">
+            <img src="aleksey-main.jpg" alt="Aleksey" class="hero-img">
 
-            <p style="font-size: 1.1rem; text-align: center; font-style: italic;">
-                "Aleksey is a bright, joyful 10-year-old boy. Our goal is to provide him with a professionally trained seizure alert service dog so he can sleep safely in his own room and embrace his teenage years with confidence and independence."
+            <p style="font-size: 1.15rem; text-align: center; font-style: italic;">
+                "Aleksey is 10, kind, funny, and endlessly empathetic. A service dog from Eyes Ears Nose & Paws can alert us to seizures and give him the independence every kid deserves. Please help bring Aleksey his best friend."
             </p>
         </div>
 
@@ -201,61 +203,55 @@
         <div id="story" class="tab-content">
             <h2>Aleksey’s Journey</h2>
             
-            <ul>
-                <li>
-                    <strong>The Early Days:</strong> At just 4 months old, Aleksey experienced sudden, severe medical emergencies. After months of hospitalizations and uncertainty, genetic testing revealed he has <strong>SCN8A</strong>, a rare genetic mutation causing dynamic and unpredictable epilepsy.
-                </li>
-                <li>
-                    <strong>Overcoming Obstacles:</strong> As a resilient military family, we navigated state moves, frequent hospital visits, and constant care transitions. Through it all—and with years of therapy and specialized neurological care—Aleksey has thrived. Today, he is a bright, kind, and joyful 10-year-old who loves drawing, solving puzzles, spending time in nature, and making people laugh!
-                </li>
-                <li>
-                    <strong>A New Challenge & Need for Safety:</strong> Recently, Aleksey’s seizures began occurring in his sleep. Because nighttime seizures pose significant risks without an advance warning system, he must sleep in our room for constant line-of-sight supervision.
-                </li>
-                <li>
-                    <strong>Why a Service Dog?</strong> As Aleksey approaches his teenage years, we want him to experience the independence every child deserves. A professionally trained service dog through <strong>Eyes Ears Nose & Paws (EENP)</strong> will alert us to nighttime and onset seizures, provide sensory grounding for his autism, and give Aleksey the confidence to sleep safely in his own bedroom and explore the world with a faithful partner.
-                </li>
-            </ul>
+            <p>At 4 months old, Aleksey was the healthiest, happiest baby his doctor had ever seen. Days later, one night he suddenly stopped breathing and had his first episode, changing our lives forever. It took months of hospital stays to find the cause: <strong>SCN8A</strong>, a rare genetic epilepsy.</p>
+
+            <p>We’re a military family, and we’ve moved states and changed doctors again and again to find the right care. Now his seizures have started happening at night, so he sleeps in our room. Aleksey is 10, kind, funny, and endlessly empathetic.</p>
+
+            <p>A service dog from <strong>Eyes Ears Nose & Paws</strong> can alert us to seizures, give him sensory grounding, and give him the independence every kid deserves. Please help bring Aleksey his best friend. 🐾</p>
+
+            <h3>Photo Gallery</h3>
+            <div class="photo-gallery">
+                <img src="aleksey-1.jpg" alt="Aleksey Photo 1">
+                <img src="aleksey-2.jpg" alt="Aleksey Photo 2">
+                <img src="aleksey-3.jpg" alt="Aleksey Photo 3">
+            </div>
         </div>
 
         <!-- TAB 3: SCN8A & SUDEP EDUCATION -->
-        <div id="story-education" class="tab-content">
+        <div id="education" class="tab-content">
             <h2>Understanding SCN8A & SUDEP</h2>
             
             <h3>What is SCN8A Epilepsy?</h3>
             <p>
-                SCN8A developmental and epileptic encephalopathy is a rare genetic mutation affecting the sodium channels in the brain. It causes unpredictable seizure activity that can change in frequency, duration, and severity throughout a child's life.
+                SCN8A developmental and epileptic encephalopathy is a rare genetic mutation affecting sodium channels in the brain. It causes unpredictable seizure activity that can change in frequency, duration, and severity throughout a child's life.
             </p>
 
-            <h3>The Reality of Nighttime Seizures & SUDEP</h3>
+            <h3>The Danger of Nighttime Seizures & SUDEP</h3>
             <p>
-                <strong>SUDEP</strong> stands for <em>Sudden Unexpected Death in Epilepsy</em>. It is a critical concern for families managing severe epilepsy, particularly when seizures occur during sleep. 
+                <strong>SUDEP</strong> stands for <em>Sudden Unexpected Death in Epilepsy</em>. It is a critical concern for families managing severe epilepsy, particularly when seizures occur silently during sleep.
             </p>
             <p>
-                Because nocturnal seizures often happen silently without mechanical warning, continuous supervision is required. A trained seizure alert service dog is capable of sensing nighttime seizure activity or onset changes, alerting caregivers immediately so prompt medical intervention can take place.
+                Because nocturnal seizures often happen without mechanical warning, continuous supervision is required. A trained seizure alert service dog is capable of sensing nighttime seizure activity or onset changes, alerting caregivers immediately so prompt medical intervention can take place.
             </p>
         </div>
 
-        <!-- TAB 4: HOW TO HELP & HELPFUL LINKS -->
+        <!-- TAB 4: HOW TO HELP & LINKS -->
         <div id="help" class="tab-content">
             <h2>How You Can Support & Helpful Resources</h2>
 
             <h3>Ways to Get Involved</h3>
             <ul>
-                <li><strong>Donate:</strong> Every contribution directly helps fund the placement, training, and care costs for Aleksey's service dog.</li>
-                <li><strong>Share:</strong> Share this page (<code>mopo3uk.github.io/pawsforaleksey</code>) with friends, family, and local community groups!</li>
-                <li><strong>Community & Business Support:</strong> If you represent an organization or business interested in sponsoring an event or auction item, please reach out to us.</li>
+                <li><strong>Donate:</strong> Every contribution directly helps fund placement, training, and care costs for Aleksey's service dog.</li>
+                <li><strong>Share:</strong> Share this page or our GoFundMe link (<a href="https://gofund.me/45a33d5e5" target="_blank">https://gofund.me/45a33d5e5</a>) with friends, family, and local community groups!</li>
+                <li><strong>Community & Business Support:</strong> If you represent an organization or business interested in sponsoring an event or auction item, please reach out!</li>
             </ul>
 
             <h3>Helpful Community Links</h3>
             <ul>
-                <li><a href="https://eenp.org/" target="_blank">Eyes Ears Nose & Paws (EENP)</a> – Our training foundation</li>
-                <li><a href="https://www.thecutesyndrome.org/" target="_blank">The Cute Syndrome Foundation</a> – SCN8A Research & Support</li>
-                <li><a href="https://caninesforkids.org/" target="_blank">Canines for Disabled Kids</a> – Service dog scholarships & guidance</li>
+                <li><a href="https://eenp.org/" target="_blank">Eyes Ears Nose & Paws (EENP)</a> – Service Dog Training Organization</li>
+                <li><a href="https://www.thecutesyndrome.org/" target="_blank">The Cute Syndrome Foundation</a> – SCN8A Research & Family Support</li>
+                <li><a href="https://caninesforkids.org/" target="_blank">Canines for Disabled Kids</a> – Service Dog Scholarships & Guidance</li>
             </ul>
-
-            <div style="text-align: center; margin-top: 2rem;">
-                <p><strong>Contact Us:</strong> Have questions or ideas for fundraising? Reach out to us through our Facebook campaign page or email!</p>
-            </div>
         </div>
 
     </div>
@@ -264,25 +260,18 @@
         <p>Paws for Aleksey Campaign | Thank you for supporting our family!</p>
     </footer>
 
-    <!-- Tab Switching Script -->
     <script>
         function openTab(evt, tabName) {
             var i, tabcontent, tablinks;
-            
-            // Hide all tab content
             tabcontent = document.getElementsByClassName("tab-content");
             for (i = 0; i < tabcontent.length; i++) {
                 tabcontent[i].style.display = "none";
                 tabcontent[i].classList.remove("active");
             }
-
-            // Remove active class from buttons
             tablinks = document.getElementsByClassName("tab-btn");
             for (i = 0; i < tablinks.length; i++) {
                 tablinks[i].classList.remove("active");
             }
-
-            // Show selected tab and activate button
             document.getElementById(tabName).style.display = "block";
             document.getElementById(tabName).classList.add("active");
             evt.currentTarget.classList.add("active");
