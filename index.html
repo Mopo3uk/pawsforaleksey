@@ -36,7 +36,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 0.5rem;
+            gap: 0.6rem;
         }
 
         header p {
@@ -144,7 +144,6 @@
             justify-content: center;
         }
 
-        /* Cleaned Up Large QR Code Display */
         .qr-wrapper {
             background: #ffffff;
             padding: 8px;
@@ -204,24 +203,48 @@
             margin: 1.5rem 0;
         }
 
-        /* Cute Paw Bullet Points */
-        ul.paw-list {
+        /* Custom Bullet Lists */
+        ul.custom-list {
             list-style: none;
             padding-left: 0;
         }
 
-        ul.paw-list li {
+        ul.custom-list li {
             position: relative;
             padding-left: 2rem;
             margin-bottom: 0.8rem;
         }
 
+        /* Dark Blue Paw Bullets for Service Dog Tasks */
         ul.paw-list li::before {
             content: "🐾";
             position: absolute;
             left: 0;
             top: 0;
             font-size: 1.1rem;
+            color: var(--primary);
+        }
+
+        /* Orange Heart Bullets for Ways to Get Involved */
+        ul.heart-list li::before {
+            content: "🧡";
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 1.1rem;
+        }
+
+        .link-item {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .scn8a-logo-svg {
+            width: 24px;
+            height: 24px;
+            flex-shrink: 0;
         }
 
         footer {
@@ -236,7 +259,10 @@
 
     <header>
         <h1>
-            <span style="color: #fbd38d;">🐾</span> Paws for Aleksey
+            <svg width="32" height="32" viewBox="0 0 512 512" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
+                <path d="M256 224c-79.4 0-192 122.8-192 200 0 47.3 35.9 88 96 88 37.7 0 68.4-18.7 96-48 27.6 29.3 58.3 48 96 48 60.1 0 96-40.7 96-88 0-77.2-112.6-200-192-200zm-144-80c26.5 0 48-28.7 48-64S138.5 16 112 16 64 44.7 64 80s21.5 64 48 64zm288 0c26.5 0 48-28.7 48-64s-21.5-64-48-64-48 28.7-48 64 21.5 64 48 64zm-208 32c26.5 0 48-28.7 48-64s-21.5-64-48-64-48 28.7-48 64 21.5 64 48 64zm128 0c26.5 0 48-28.7 48-64s-21.5-64-48-64-48 28.7-48 64 21.5 64 48 64z"/>
+            </svg>
+            Paws for Aleksey
         </h1>
         <p>A Service Dog Journey for Safety, Independence, and Peace of Mind</p>
     </header>
@@ -266,7 +292,7 @@
                         Scan or click below to support Aleksey's service dog!
                     </p>
                     <div class="qr-wrapper">
-                        <img src="QRcode.png" alt="Donate QR Code" class="qr-code">
+                        <img src="qr-code.png" alt="Donate QR Code" class="qr-code">
                     </div>
                     <a href="https://gofund.me/45a33d5e5" class="btn-donate" target="_blank">❤️ Click Here to Donate</a>
                 </div>
@@ -343,7 +369,7 @@
 
             <div class="info-box">
                 <strong>Key SCN8A Facts (Source: The Cute Syndrome Foundation):</strong>
-                <ul class="paw-list" style="margin-top: 0.8rem;">
+                <ul style="margin-top: 0.8rem; margin-bottom: 0;">
                     <li>SCN8A is a rare genetic epilepsy; average seizure onset occurs early in life (around 4 months of age).</li>
                     <li>Because SCN8A affects sodium channels in the brain, seizures can be difficult to treat and fluctuate in frequency and severity throughout a child's life.</li>
                     <li>It exists on a broad clinical spectrum. Beyond seizures, individuals may experience motor differences, sensory processing needs, or developmental features like Autism Spectrum Disorder (ASD).</li>
@@ -366,7 +392,8 @@
             <p>
                 A professionally trained <strong>seizure alert service dog</strong> can:
             </p>
-            <ul class="paw-list">
+
+            <ul class="custom-list paw-list">
                 <li><strong>Provide Rapid Nighttime Alert:</strong> Sense onset seizure movement, behavioral shifts, or physiological changes during sleep and bark/alert parents immediately.</li>
                 <li><strong>Enable Timely Medical Intervention:</strong> Ensure caregivers can administer emergency intervention swiftly, mitigating nighttime risk.</li>
                 <li><strong>Bridge Safety and Autonomy:</strong> Give children like Aleksey the safety net needed to sleep in their own room and gain age-appropriate independence as they transition into adolescence.</li>
@@ -377,19 +404,52 @@
         <div id="help" class="tab-content">
             <h2>How You Can Support & Helpful Resources</h2>
 
-            <h3>Ways to Get Involved</h3>
-            <ul class="paw-list">
-                <li><strong>Donate:</strong> Every contribution directly helps fund placement, training, and care costs for Aleksey's service dog.</li>
-                <li><strong>Share:</strong> Share this page or our GoFundMe link (<a href="https://gofund.me/45a33d5e5" target="_blank">https://gofund.me/45a33d5e5</a>) with friends, family, and local community groups!</li>
-                <li><strong>Community & Business Support:</strong> If you represent an organization or business interested in sponsoring an event or auction item, please reach out!</li>
-            </ul>
+            <div class="home-grid">
+                <!-- Left Side: Photo of Aleksey and Mom -->
+                <div class="home-photo-box">
+                    <img src="aleksey_me.JPG" alt="Aleksey and Mom" class="home-photo">
+                </div>
+
+                <!-- Right Side: Ways to Get Involved -->
+                <div>
+                    <h3>Ways to Get Involved</h3>
+                    <ul class="custom-list heart-list">
+                        <li><strong>Donate:</strong> Every contribution directly helps fund placement, training, and care costs for Aleksey's service dog.</li>
+                        <li><strong>Share:</strong> Share this page or our GoFundMe link (<a href="https://gofund.me/45a33d5e5" target="_blank">https://gofund.me/45a33d5e5</a>) with friends, family, and local community groups!</li>
+                        <li><strong>Community & Business Support:</strong> If you represent an organization or business interested in sponsoring an event or auction item, please reach out directly to <strong><a href="mailto:arina.o.morozova@gmail.com">arina.o.morozova@gmail.com</a></strong>!</li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr style="border: 0; border-top: 1px solid #edf2f7; margin: 2rem 0 1.5rem 0;">
 
             <h3>Helpful Community Links</h3>
-            <ul class="paw-list">
-                <li><a href="https://eenp.org/" target="_blank">Eyes Ears Nose & Paws (EENP)</a> – Service Dog Training Organization</li>
-                <li><a href="https://www.thecutesyndrome.org/" target="_blank">The Cute Syndrome Foundation</a> – SCN8A Research & Family Support</li>
-                <li><a href="https://caninesforkids.org/" target="_blank">Canines for Disabled Kids</a> – Service Dog Scholarships & Guidance</li>
-            </ul>
+            
+            <div style="margin-top: 1rem;">
+                <div class="link-item">
+                    <span style="font-size: 1.2rem; color: var(--primary);">🐾</span>
+                    <div>
+                        <a href="https://eenp.org/" target="_blank" style="font-weight: bold; font-size: 1.05rem;">Eyes Ears Nose & Paws (EENP)</a> – Service Dog Training Organization
+                    </div>
+                </div>
+
+                <div class="link-item">
+                    <svg class="scn8a-logo-svg" viewBox="0 0 100 100" fill="#2b6cb0">
+                        <path d="M50,88 C50,88 12,60 12,32 C12,18 23,8 36,8 C43,8 48,12 50,16 C52,12 57,8 64,8 C77,8 88,18 88,32 C88,60 50,88 50,88 Z"/>
+                    </svg>
+                    <div>
+                        <a href="https://www.thecutesyndrome.org/" target="_blank" style="font-weight: bold; font-size: 1.05rem;">The Cute Syndrome Foundation</a> – SCN8A Research & Family Support
+                    </div>
+                </div>
+
+                <div class="link-item">
+                    <span style="font-size: 1.2rem; color: var(--primary);">🐾</span>
+                    <div>
+                        <a href="https://caninesforkids.org/" target="_blank" style="font-weight: bold; font-size: 1.05rem;">Canines for Disabled Kids</a> – Service Dog Scholarships & Guidance
+                    </div>
+                </div>
+            </div>
+
         </div>
 
     </div>
