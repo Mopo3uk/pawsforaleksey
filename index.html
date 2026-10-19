@@ -27,16 +27,12 @@
             background: linear-gradient(135deg, var(--primary), var(--secondary));
             color: white;
             text-align: center;
-            padding: 1.8rem 1rem 1.2rem;
+            padding: 2rem 1rem 1.2rem;
         }
 
         header h1 {
             margin: 0;
-            font-size: 2.4rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.8rem;
+            font-size: 2.3rem;
         }
 
         header p {
@@ -60,7 +56,7 @@
             background: none;
             border: none;
             color: rgba(255,255,255,0.8);
-            padding: 0.85rem 1.2rem;
+            padding: 0.9rem 1.2rem;
             font-size: 1rem;
             font-weight: 600;
             cursor: pointer;
@@ -74,15 +70,15 @@
         }
 
         .container {
-            max-width: 920px;
-            margin: 1.2rem auto;
+            max-width: 900px;
+            margin: 1.5rem auto;
             padding: 0 1rem;
         }
 
         .tab-content {
             display: none;
             background: var(--card-bg);
-            padding: 1.8rem;
+            padding: 2rem;
             border-radius: 12px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.08);
             animation: fadeIn 0.4s ease-in-out;
@@ -100,14 +96,14 @@
         h2 {
             color: var(--primary);
             border-bottom: 2px solid #edf2f7;
-            padding-bottom: 0.4rem;
+            padding-bottom: 0.5rem;
             margin-top: 0;
         }
 
         h3 {
             color: var(--secondary);
-            margin-top: 1.2rem;
-            margin-bottom: 0.4rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
         }
 
         .home-grid {
@@ -115,7 +111,7 @@
             grid-template-columns: 1fr 1fr;
             gap: 1.5rem;
             align-items: center;
-            margin-top: 0.8rem;
+            margin-top: 1rem;
         }
 
         @media (max-width: 700px) {
@@ -130,7 +126,16 @@
 
         .home-photo {
             width: 100%;
-            max-height: 340px;
+            max-height: 380px;
+            object-fit: contain;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        /* Full Height Style for Statue of Liberty Photo on Tab 4 */
+        .statue-photo {
+            width: 100%;
+            max-height: 480px;
             object-fit: contain;
             border-radius: 12px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
@@ -167,7 +172,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
             gap: 1rem;
-            margin-top: 1.2rem;
+            margin-top: 1.5rem;
         }
 
         .photo-gallery img {
@@ -182,12 +187,12 @@
             display: inline-block;
             background-color: var(--accent);
             color: white;
-            padding: 0.8rem 1.8rem;
+            padding: 0.85rem 1.8rem;
             border-radius: 30px;
             text-decoration: none;
             font-weight: bold;
             font-size: 1.05rem;
-            margin-top: 0.4rem;
+            margin-top: 0.5rem;
             box-shadow: 0 4px 10px rgba(221, 107, 32, 0.3);
         }
 
@@ -198,9 +203,9 @@
         .info-box {
             background-color: #ebf8ff;
             border-left: 4px solid var(--secondary);
-            padding: 1rem 1.2rem;
+            padding: 1.2rem;
             border-radius: 6px;
-            margin: 1.2rem 0;
+            margin: 1.5rem 0;
         }
 
         /* Custom Bullet Lists */
@@ -213,20 +218,16 @@
         ul.custom-list li {
             position: relative;
             padding-left: 2rem;
-            margin-bottom: 0.7rem;
+            margin-bottom: 0.8rem;
         }
 
-        /* Larger, True Dark Blue SVG Paw Bullets */
+        /* Original Paw Emoji Bullets */
         ul.paw-list li::before {
-            content: "";
+            content: "🐾";
             position: absolute;
             left: 0;
-            top: 4px;
-            width: 18px;
-            height: 18px;
-            background-color: var(--primary);
-            mask: url('data:image/svg+xml;utf8,<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M256 224c-79.4 0-192 122.8-192 200 0 47.3 35.9 88 96 88 37.7 0 68.4-18.7 96-48 27.6 29.3 58.3 48 96 48 60.1 0 96-40.7 96-88 0-77.2-112.6-200-192-200zm-144-80c26.5 0 48-28.7 48-64S138.5 16 112 16 64 44.7 64 80s21.5 64 48 64zm288 0c26.5 0 48-28.7 48-64s-21.5-64-48-64-48 28.7-48 64 21.5 64 48 64zm-208 32c26.5 0 48-28.7 48-64s-21.5-64-48-64-48 28.7-48 64 21.5 64 48 64zm128 0c26.5 0 48-28.7 48-64s-21.5-64-48-64-48 28.7-48 64 21.5 64 48 64z"/></svg>') no-repeat center;
-            -webkit-mask: url('data:image/svg+xml;utf8,<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M256 224c-79.4 0-192 122.8-192 200 0 47.3 35.9 88 96 88 37.7 0 68.4-18.7 96-48 27.6 29.3 58.3 48 96 48 60.1 0 96-40.7 96-88 0-77.2-112.6-200-192-200zm-144-80c26.5 0 48-28.7 48-64S138.5 16 112 16 64 44.7 64 80s21.5 64 48 64zm288 0c26.5 0 48-28.7 48-64s-21.5-64-48-64-48 28.7-48 64 21.5 64 48 64zm-208 32c26.5 0 48-28.7 48-64s-21.5-64-48-64-48 28.7-48 64 21.5 64 48 64zm128 0c26.5 0 48-28.7 48-64s-21.5-64-48-64-48 28.7-48 64 21.5 64 48 64z"/></svg>') no-repeat center;
+            top: 0;
+            font-size: 1.1rem;
         }
 
         /* Orange Heart Bullets */
@@ -242,25 +243,18 @@
             display: flex;
             align-items: center;
             gap: 0.8rem;
-            margin-bottom: 0.6rem;
-        }
-
-        .paw-icon-svg {
-            width: 20px;
-            height: 20px;
-            fill: var(--primary);
-            flex-shrink: 0;
+            margin-bottom: 0.8rem;
         }
 
         .scn8a-logo-svg {
-            width: 22px;
-            height: 22px;
+            width: 24px;
+            height: 24px;
             flex-shrink: 0;
         }
 
         footer {
             text-align: center;
-            padding: 1.5rem;
+            padding: 2rem;
             color: #718096;
             font-size: 0.9rem;
         }
@@ -269,13 +263,7 @@
 <body>
 
     <header>
-        <h1>
-            <!-- Pure White Crisp Large Paw Icon -->
-            <svg width="36" height="36" viewBox="0 0 512 512" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
-                <path d="M256 224c-79.4 0-192 122.8-192 200 0 47.3 35.9 88 96 88 37.7 0 68.4-18.7 96-48 27.6 29.3 58.3 48 96 48 60.1 0 96-40.7 96-88 0-77.2-112.6-200-192-200zm-144-80c26.5 0 48-28.7 48-64S138.5 16 112 16 64 44.7 64 80s21.5 64 48 64zm288 0c26.5 0 48-28.7 48-64s-21.5-64-48-64-48 28.7-48 64 21.5 64 48 64zm-208 32c26.5 0 48-28.7 48-64s-21.5-64-48-64-48 28.7-48 64 21.5 64 48 64zm128 0c26.5 0 48-28.7 48-64s-21.5-64-48-64-48 28.7-48 64 21.5 64 48 64z"/>
-            </svg>
-            Paws for Aleksey
-        </h1>
+        <h1>🐾 Paws for Aleksey</h1>
         <p>A Service Dog Journey for Safety, Independence, and Peace of Mind</p>
     </header>
 
@@ -298,7 +286,7 @@
                     <img src="aleksey-main.png" alt="Aleksey" class="home-photo">
                 </div>
 
-                <!-- Right Side: Updated QRcode.png Image -->
+                <!-- Right Side: QRcode.png Image -->
                 <div class="home-donate-box">
                     <p style="font-size: 0.95rem; margin-bottom: 0.2rem; font-weight: 600;">
                         Scan or click below to support Aleksey's service dog!
@@ -310,7 +298,7 @@
                 </div>
             </div>
 
-            <hr style="border: 0; border-top: 1px solid #edf2f7; margin: 1.2rem 0 0.8rem 0;">
+            <hr style="border: 0; border-top: 1px solid #edf2f7; margin: 1.5rem 0 1rem 0;">
 
             <p style="font-size: 1.1rem; text-align: center; font-style: italic; margin: 0;">
                 "Meet Aleksey: 10 years old, born with a rare genetic epilepsy (SCN8A), and the kindest, funniest kid you'll ever meet. Help us bring him a service dog who can alert us to seizures and give him the independence he deserves. 🐾"
@@ -412,19 +400,19 @@
             </ul>
         </div>
 
-        <!-- TAB 4: HOW TO HELP & LINKS (Optimized to fit on screen) -->
-        <div id="help" class="tab-content" style="padding: 1.4rem;">
-            <h2 style="margin-bottom: 0.8rem;">How You Can Support & Helpful Resources</h2>
+        <!-- TAB 4: HOW TO HELP & LINKS -->
+        <div id="help" class="tab-content">
+            <h2>How You Can Support & Helpful Resources</h2>
 
-            <div class="home-grid" style="align-items: flex-start; gap: 1rem; margin-top: 0;">
-                <!-- Left Side: Clean Image without extra white frame -->
+            <div class="home-grid" style="align-items: flex-start;">
+                <!-- Left Side: Full-Height Photo showing Statue of Liberty -->
                 <div class="home-photo-box">
-                    <img src="aleksey_me.JPG" alt="Aleksey and Mom" style="width: 100%; max-height: 280px; object-fit: cover; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                    <img src="aleksey_me.JPG" alt="Aleksey and Mom at Statue of Liberty" class="statue-photo">
                 </div>
 
                 <!-- Right Side: Ways to Get Involved -->
                 <div>
-                    <h3 style="margin-top: 0;">Ways to Get Involved</h3>
+                    <h3>Ways to Get Involved</h3>
                     <ul class="custom-list heart-list">
                         <li><strong>Donate:</strong> Every contribution directly helps fund placement, training, and care costs for Aleksey's service dog.</li>
                         <li><strong>Share:</strong> Share this page or our GoFundMe link (<a href="https://gofund.me/45a33d5e5" target="_blank">https://gofund.me/45a33d5e5</a>) with friends, family, and local community groups!</li>
@@ -433,15 +421,15 @@
                 </div>
             </div>
 
-            <hr style="border: 0; border-top: 1px solid #edf2f7; margin: 1.2rem 0 1rem 0;">
+            <hr style="border: 0; border-top: 1px solid #edf2f7; margin: 2rem 0 1.5rem 0;">
 
-            <h3 style="margin-top: 0;">Helpful Community Links</h3>
+            <h3>Helpful Community Links</h3>
             
-            <div style="margin-top: 0.6rem;">
+            <div style="margin-top: 1rem;">
                 <div class="link-item">
-                    <svg class="paw-icon-svg" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M256 224c-79.4 0-192 122.8-192 200 0 47.3 35.9 88 96 88 37.7 0 68.4-18.7 96-48 27.6 29.3 58.3 48 96 48 60.1 0 96-40.7 96-88 0-77.2-112.6-200-192-200zm-144-80c26.5 0 48-28.7 48-64S138.5 16 112 16 64 44.7 64 80s21.5 64 48 64zm288 0c26.5 0 48-28.7 48-64s-21.5-64-48-64-48 28.7-48 64 21.5 64 48 64zm-208 32c26.5 0 48-28.7 48-64s-21.5-64-48-64-48 28.7-48 64 21.5 64 48 64zm128 0c26.5 0 48-28.7 48-64s-21.5-64-48-64-48 28.7-48 64 21.5 64 48 64z"/></svg>
+                    <span style="font-size: 1.2rem;">🐾</span>
                     <div>
-                        <a href="https://eenp.org/" target="_blank" style="font-weight: bold; font-size: 1rem;">Eyes Ears Nose & Paws (EENP)</a> – Service Dog Training Organization
+                        <a href="https://eenp.org/" target="_blank" style="font-weight: bold; font-size: 1.05rem;">Eyes Ears Nose & Paws (EENP)</a> – Service Dog Training Organization
                     </div>
                 </div>
 
@@ -450,14 +438,14 @@
                         <path d="M50,88 C50,88 12,60 12,32 C12,18 23,8 36,8 C43,8 48,12 50,16 C52,12 57,8 64,8 C77,8 88,18 88,32 C88,60 50,88 50,88 Z"/>
                     </svg>
                     <div>
-                        <a href="https://www.thecutesyndrome.org/" target="_blank" style="font-weight: bold; font-size: 1rem;">The Cute Syndrome Foundation</a> – SCN8A Research & Family Support
+                        <a href="https://www.thecutesyndrome.org/" target="_blank" style="font-weight: bold; font-size: 1.05rem;">The Cute Syndrome Foundation</a> – SCN8A Research & Family Support
                     </div>
                 </div>
 
                 <div class="link-item">
-                    <svg class="paw-icon-svg" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M256 224c-79.4 0-192 122.8-192 200 0 47.3 35.9 88 96 88 37.7 0 68.4-18.7 96-48 27.6 29.3 58.3 48 96 48 60.1 0 96-40.7 96-88 0-77.2-112.6-200-192-200zm-144-80c26.5 0 48-28.7 48-64S138.5 16 112 16 64 44.7 64 80s21.5 64 48 64zm288 0c26.5 0 48-28.7 48-64s-21.5-64-48-64-48 28.7-48 64 21.5 64 48 64zm-208 32c26.5 0 48-28.7 48-64s-21.5-64-48-64-48 28.7-48 64 21.5 64 48 64zm128 0c26.5 0 48-28.7 48-64s-21.5-64-48-64-48 28.7-48 64 21.5 64 48 64z"/></svg>
+                    <span style="font-size: 1.2rem;">🐾</span>
                     <div>
-                        <a href="https://caninesforkids.org/" target="_blank" style="font-weight: bold; font-size: 1rem;">Canines for Disabled Kids</a> – Service Dog Scholarships & Guidance
+                        <a href="https://caninesforkids.org/" target="_blank" style="font-weight: bold; font-size: 1.05rem;">Canines for Disabled Kids</a> – Service Dog Scholarships & Guidance
                     </div>
                 </div>
             </div>
