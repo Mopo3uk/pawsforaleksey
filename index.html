@@ -33,6 +33,10 @@
         header h1 {
             margin: 0;
             font-size: 2.3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.6rem;
         }
 
         header p {
@@ -132,7 +136,6 @@
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
 
-        /* Full Height Style for Statue of Liberty Photo on Tab 4 */
         .statue-photo {
             width: 100%;
             max-height: 480px;
@@ -208,7 +211,6 @@
             margin: 1.5rem 0;
         }
 
-        /* Custom Bullet Lists */
         ul.custom-list {
             list-style: none;
             padding-left: 0;
@@ -221,7 +223,6 @@
             margin-bottom: 0.8rem;
         }
 
-        /* Original Paw Emoji Bullets */
         ul.paw-list li::before {
             content: "🐾";
             position: absolute;
@@ -230,7 +231,6 @@
             font-size: 1.1rem;
         }
 
-        /* Orange Heart Bullets */
         ul.heart-list li::before {
             content: "🧡";
             position: absolute;
@@ -263,7 +263,13 @@
 <body>
 
     <header>
-        <h1>🐾 Paws for Aleksey</h1>
+        <h1>
+            <!-- Bright Orange SVG Paw Print -->
+            <svg width="34" height="34" viewBox="0 0 512 512" fill="#dd6b20" xmlns="http://www.w3.org/2000/svg">
+                <path d="M256 224c-79.4 0-192 122.8-192 200 0 47.3 35.9 88 96 88 37.7 0 68.4-18.7 96-48 27.6 29.3 58.3 48 96 48 60.1 0 96-40.7 96-88 0-77.2-112.6-200-192-200zm-144-80c26.5 0 48-28.7 48-64S138.5 16 112 16 64 44.7 64 80s21.5 64 48 64zm288 0c26.5 0 48-28.7 48-64s-21.5-64-48-64-48 28.7-48 64 21.5 64 48 64zm-208 32c26.5 0 48-28.7 48-64s-21.5-64-48-64-48 28.7-48 64 21.5 64 48 64zm128 0c26.5 0 48-28.7 48-64s-21.5-64-48-64-48 28.7-48 64 21.5 64 48 64z"/>
+            </svg>
+            Paws for Aleksey
+        </h1>
         <p>A Service Dog Journey for Safety, Independence, and Peace of Mind</p>
     </header>
 
@@ -281,12 +287,10 @@
             <h2 style="text-align: center;">Help Us Reach Our Goal of $20,000</h2>
 
             <div class="home-grid">
-                <!-- Left Side: Aleksey's Photo -->
                 <div class="home-photo-box">
                     <img src="aleksey-main.png" alt="Aleksey" class="home-photo">
                 </div>
 
-                <!-- Right Side: QRcode.png Image -->
                 <div class="home-donate-box">
                     <p style="font-size: 0.95rem; margin-bottom: 0.2rem; font-weight: 600;">
                         Scan or click below to support Aleksey's service dog!
@@ -405,12 +409,10 @@
             <h2>How You Can Support & Helpful Resources</h2>
 
             <div class="home-grid" style="align-items: flex-start;">
-                <!-- Left Side: Full-Height Photo showing Statue of Liberty -->
                 <div class="home-photo-box">
                     <img src="aleksey_me.JPG" alt="Aleksey and Mom at Statue of Liberty" class="statue-photo">
                 </div>
 
-                <!-- Right Side: Ways to Get Involved -->
                 <div>
                     <h3>Ways to Get Involved</h3>
                     <ul class="custom-list heart-list">
