@@ -33,6 +33,10 @@
         header h1 {
             margin: 0;
             font-size: 2.3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
         }
 
         header p {
@@ -140,12 +144,24 @@
             justify-content: center;
         }
 
-        .qr-code {
-            max-width: 190px;
-            width: 100%;
-            border-radius: 12px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        /* Cleaned Up Large QR Code Display */
+        .qr-wrapper {
+            background: #ffffff;
+            padding: 8px;
+            border-radius: 16px;
+            border: 2px solid #e2e8f0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            display: inline-block;
             margin: 0.8rem 0;
+            overflow: hidden;
+        }
+
+        .qr-code {
+            max-width: 210px;
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 8px;
         }
 
         .photo-gallery {
@@ -188,6 +204,26 @@
             margin: 1.5rem 0;
         }
 
+        /* Cute Paw Bullet Points */
+        ul.paw-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        ul.paw-list li {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 0.8rem;
+        }
+
+        ul.paw-list li::before {
+            content: "🐾";
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 1.1rem;
+        }
+
         footer {
             text-align: center;
             padding: 2rem;
@@ -199,7 +235,9 @@
 <body>
 
     <header>
-        <h1>🐾 Paws for Aleksey</h1>
+        <h1>
+            <span style="color: #fbd38d;">🐾</span> Paws for Aleksey
+        </h1>
         <p>A Service Dog Journey for Safety, Independence, and Peace of Mind</p>
     </header>
 
@@ -222,12 +260,14 @@
                     <img src="aleksey-main.png" alt="Aleksey" class="home-photo">
                 </div>
 
-                <!-- Right Side: QR Code, Short Text & Donate Button -->
+                <!-- Right Side: QR Code & Donate Button -->
                 <div class="home-donate-box">
-                    <p style="font-size: 0.95rem; margin-bottom: 0.2rem;">
-                        Scan or click below to support Aleksey's seizure alert service dog!
+                    <p style="font-size: 0.95rem; margin-bottom: 0.2rem; font-weight: 600;">
+                        Scan or click below to support Aleksey's service dog!
                     </p>
-                    <img src="qr-code.png" alt="Donate QR Code" class="qr-code">
+                    <div class="qr-wrapper">
+                        <img src="qr-code.png" alt="Donate QR Code" class="qr-code">
+                    </div>
                     <a href="https://gofund.me/45a33d5e5" class="btn-donate" target="_blank">❤️ Click Here to Donate</a>
                 </div>
             </div>
@@ -298,12 +338,12 @@
                 <strong>SCN8A-related disorders</strong> are rare genetic neurodevelopmental conditions caused by changes (variants) in the <em>SCN8A</em> gene. This gene provides instructions for making <strong>Nav1.6</strong>, a voltage-gated sodium channel essential for regulating electrical signals and communication between nerve cells in the brain.
             </p>
             <p>
-                When a pathogenic variant occurs in SCN8A, nerve cells become hyperexcitable, frequently leading to early-onset epilepsy and developmental challenges. 
+                When a pathogenic variant occurs in SCN8A, nerve cells become hyperexcitable, frequently leading to early-onset epilepsy and developmental challenges.
             </p>
 
             <div class="info-box">
                 <strong>Key SCN8A Facts (Source: The Cute Syndrome Foundation):</strong>
-                <ul>
+                <ul class="paw-list" style="margin-top: 0.8rem;">
                     <li>SCN8A is a rare genetic epilepsy; average seizure onset occurs early in life (around 4 months of age).</li>
                     <li>Because SCN8A affects sodium channels in the brain, seizures can be difficult to treat and fluctuate in frequency and severity throughout a child's life.</li>
                     <li>It exists on a broad clinical spectrum. Beyond seizures, individuals may experience motor differences, sensory processing needs, or developmental features like Autism Spectrum Disorder (ASD).</li>
@@ -321,13 +361,13 @@
 
             <h3>Why a Service Dog Makes a Lifesaving Difference</h3>
             <p>
-                Because standard monitors cannot capture every type of seizure activity, nighttime supervision usually requires continuous parental line-of-sight vigilance. 
+                Because standard monitors cannot capture every type of seizure activity, nighttime supervision usually requires continuous parental line-of-sight vigilance.
             </p>
             <p>
                 A professionally trained <strong>seizure alert service dog</strong> can:
             </p>
-            <ul>
-                <li><strong>Provide Rapid Nighttime Alert:</strong> Sense onset seizure movement, behavioral shifts, or physiological changes during sleep and bark/alert parents immediately[cite: 1].</li>
+            <ul class="paw-list">
+                <li><strong>Provide Rapid Nighttime Alert:</strong> Sense onset seizure movement, behavioral shifts, or physiological changes during sleep and bark/alert parents immediately.</li>
                 <li><strong>Enable Timely Medical Intervention:</strong> Ensure caregivers can administer emergency intervention swiftly, mitigating nighttime risk.</li>
                 <li><strong>Bridge Safety and Autonomy:</strong> Give children like Aleksey the safety net needed to sleep in their own room and gain age-appropriate independence as they transition into adolescence.</li>
             </ul>
@@ -338,14 +378,14 @@
             <h2>How You Can Support & Helpful Resources</h2>
 
             <h3>Ways to Get Involved</h3>
-            <ul>
+            <ul class="paw-list">
                 <li><strong>Donate:</strong> Every contribution directly helps fund placement, training, and care costs for Aleksey's service dog.</li>
                 <li><strong>Share:</strong> Share this page or our GoFundMe link (<a href="https://gofund.me/45a33d5e5" target="_blank">https://gofund.me/45a33d5e5</a>) with friends, family, and local community groups!</li>
                 <li><strong>Community & Business Support:</strong> If you represent an organization or business interested in sponsoring an event or auction item, please reach out!</li>
             </ul>
 
             <h3>Helpful Community Links</h3>
-            <ul>
+            <ul class="paw-list">
                 <li><a href="https://eenp.org/" target="_blank">Eyes Ears Nose & Paws (EENP)</a> – Service Dog Training Organization</li>
                 <li><a href="https://www.thecutesyndrome.org/" target="_blank">The Cute Syndrome Foundation</a> – SCN8A Research & Family Support</li>
                 <li><a href="https://caninesforkids.org/" target="_blank">Canines for Disabled Kids</a> – Service Dog Scholarships & Guidance</li>
