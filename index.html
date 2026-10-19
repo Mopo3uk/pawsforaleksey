@@ -33,10 +33,6 @@
         header h1 {
             margin: 0;
             font-size: 2.3rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.6rem;
         }
 
         header p {
@@ -106,8 +102,8 @@
 
         h3 {
             color: var(--secondary);
-            margin-top: 1.5rem;
-            margin-bottom: 0.5rem;
+            margin-top: 1.2rem;
+            margin-bottom: 0.4rem;
         }
 
         .home-grid {
@@ -138,7 +134,7 @@
 
         .statue-photo {
             width: 100%;
-            max-height: 480px;
+            max-height: 380px;
             object-fit: contain;
             border-radius: 12px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
@@ -220,7 +216,7 @@
         ul.custom-list li {
             position: relative;
             padding-left: 2rem;
-            margin-bottom: 0.8rem;
+            margin-bottom: 0.7rem;
         }
 
         ul.paw-list li::before {
@@ -243,12 +239,12 @@
             display: flex;
             align-items: center;
             gap: 0.8rem;
-            margin-bottom: 0.8rem;
+            margin-bottom: 0.6rem;
         }
 
         .scn8a-logo-svg {
-            width: 24px;
-            height: 24px;
+            width: 22px;
+            height: 22px;
             flex-shrink: 0;
         }
 
@@ -263,28 +259,7 @@
 <body>
 
     <header>
-        <h1>
-            <!-- Exact Dual-Paw Print Icon in Bright Orange -->
-            <svg width="36" height="36" viewBox="0 0 100 100" fill="#dd6b20" xmlns="http://www.w3.org/2000/svg">
-                <!-- Top Left Paw -->
-                <g transform="translate(10,10) scale(0.45)">
-                    <ellipse cx="20" cy="15" rx="6" ry="9" transform="rotate(-20 20 15)"/>
-                    <ellipse cx="38" cy="8" rx="6" ry="9" transform="rotate(-5 38 8)"/>
-                    <ellipse cx="56" cy="10" rx="6" ry="9" transform="rotate(15 56 10)"/>
-                    <ellipse cx="72" cy="22" rx="6" ry="9" transform="rotate(30 72 22)"/>
-                    <path d="M 22,45 C 18,30 62,30 58,45 C 55,58 25,58 22,45 Z"/>
-                </g>
-                <!-- Bottom Right Paw -->
-                <g transform="translate(38,38) scale(0.55)">
-                    <ellipse cx="20" cy="15" rx="6" ry="9" transform="rotate(-20 20 15)"/>
-                    <ellipse cx="38" cy="8" rx="6" ry="9" transform="rotate(-5 38 8)"/>
-                    <ellipse cx="56" cy="10" rx="6" ry="9" transform="rotate(15 56 10)"/>
-                    <ellipse cx="72" cy="22" rx="6" ry="9" transform="rotate(30 72 22)"/>
-                    <path d="M 22,45 C 18,30 62,30 58,45 C 55,58 25,58 22,45 Z"/>
-                </g>
-            </svg>
-            Paws for Aleksey
-        </h1>
+        <h1>🐾 Paws for Aleksey</h1>
         <p>A Service Dog Journey for Safety, Independence, and Peace of Mind</p>
     </header>
 
@@ -419,50 +394,50 @@
             </ul>
         </div>
 
-        <!-- TAB 4: HOW TO HELP & LINKS -->
+        <!-- TAB 4: HOW TO HELP & LINKS (Optimized Side-by-Side) -->
         <div id="help" class="tab-content">
             <h2>How You Can Support & Helpful Resources</h2>
 
             <div class="home-grid" style="align-items: flex-start;">
+                <!-- Left Side: Statue of Liberty Photo -->
                 <div class="home-photo-box">
                     <img src="aleksey_me.JPG" alt="Aleksey and Mom at Statue of Liberty" class="statue-photo">
                 </div>
 
+                <!-- Right Side: Ways to Get Involved AND Helpful Community Links -->
                 <div>
-                    <h3>Ways to Get Involved</h3>
+                    <h3 style="margin-top: 0;">Ways to Get Involved</h3>
                     <ul class="custom-list heart-list">
                         <li><strong>Donate:</strong> Every contribution directly helps fund placement, training, and care costs for Aleksey's service dog.</li>
                         <li><strong>Share:</strong> Share this page or our GoFundMe link (<a href="https://gofund.me/45a33d5e5" target="_blank">https://gofund.me/45a33d5e5</a>) with friends, family, and local community groups!</li>
                         <li><strong>Community & Business Support:</strong> If you represent an organization or business interested in sponsoring an event or auction item, please reach out directly to <strong><a href="mailto:arina.o.morozova@gmail.com">arina.o.morozova@gmail.com</a></strong>!</li>
                     </ul>
-                </div>
-            </div>
 
-            <hr style="border: 0; border-top: 1px solid #edf2f7; margin: 2rem 0 1.5rem 0;">
+                    <h3 style="margin-top: 1.2rem;">Helpful Community Links</h3>
+                    
+                    <div style="margin-top: 0.6rem;">
+                        <div class="link-item">
+                            <span style="font-size: 1.2rem;">🐾</span>
+                            <div>
+                                <a href="https://eenp.org/" target="_blank" style="font-weight: bold; font-size: 1.05rem;">Eyes Ears Nose & Paws (EENP)</a> – Service Dog Training Organization
+                            </div>
+                        </div>
 
-            <h3>Helpful Community Links</h3>
-            
-            <div style="margin-top: 1rem;">
-                <div class="link-item">
-                    <span style="font-size: 1.2rem;">🐾</span>
-                    <div>
-                        <a href="https://eenp.org/" target="_blank" style="font-weight: bold; font-size: 1.05rem;">Eyes Ears Nose & Paws (EENP)</a> – Service Dog Training Organization
-                    </div>
-                </div>
+                        <div class="link-item">
+                            <svg class="scn8a-logo-svg" viewBox="0 0 100 100" fill="#2b6cb0">
+                                <path d="M50,88 C50,88 12,60 12,32 C12,18 23,8 36,8 C43,8 48,12 50,16 C52,12 57,8 64,8 C77,8 88,18 88,32 C88,60 50,88 50,88 Z"/>
+                            </svg>
+                            <div>
+                                <a href="https://www.thecutesyndrome.org/" target="_blank" style="font-weight: bold; font-size: 1.05rem;">The Cute Syndrome Foundation</a> – SCN8A Research & Family Support
+                            </div>
+                        </div>
 
-                <div class="link-item">
-                    <svg class="scn8a-logo-svg" viewBox="0 0 100 100" fill="#2b6cb0">
-                        <path d="M50,88 C50,88 12,60 12,32 C12,18 23,8 36,8 C43,8 48,12 50,16 C52,12 57,8 64,8 C77,8 88,18 88,32 C88,60 50,88 50,88 Z"/>
-                    </svg>
-                    <div>
-                        <a href="https://www.thecutesyndrome.org/" target="_blank" style="font-weight: bold; font-size: 1.05rem;">The Cute Syndrome Foundation</a> – SCN8A Research & Family Support
-                    </div>
-                </div>
-
-                <div class="link-item">
-                    <span style="font-size: 1.2rem;">🐾</span>
-                    <div>
-                        <a href="https://caninesforkids.org/" target="_blank" style="font-weight: bold; font-size: 1.05rem;">Canines for Disabled Kids</a> – Service Dog Scholarships & Guidance
+                        <div class="link-item">
+                            <span style="font-size: 1.2rem;">🐾</span>
+                            <div>
+                                <a href="https://caninesforkids.org/" target="_blank" style="font-weight: bold; font-size: 1.05rem;">Canines for Disabled Kids</a> – Service Dog Scholarships & Guidance
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
